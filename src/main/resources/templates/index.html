@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Main page</title>
+</head>
+<body>
+<form th:method="POST" th:object="${user}" th:action="@{/}">
+<input type="text" th:field="*{name}" placeholder="Введите имя">
+  <input type="text" th:field="*{age}" placeholder="Введите возраст">
+  <button type="submit">Добавить</button>
+</form>
+<div> List </div>
+<div>
+  <span th:text="'name, ' + ${name} + '!'"> </span>
+  <i th:text="'age, ' + ${age} + '!'"> </i>
+</div>
+<!--<p>Get your greeting <a href="/greeting">here</a></p>-->
+</body>
+</html>
