@@ -10,8 +10,7 @@ import org.springframework.stereotype.Component;
 // манипкляция базой
 @Component
 public class UserDAO {
-
-        private final LoginRepo loginRepo;
+    private final LoginRepo loginRepo;
     @Autowired
     public UserDAO(LoginRepo loginRepo) {
         this.loginRepo = loginRepo;
